@@ -1,0 +1,52 @@
+group 'uk.co.drnaylor.minecraft'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.7
+
+repositories {
+    jcenter()
+    maven {
+        name = 'oss-snapshots'
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+    maven {
+        name = 'remove'
+        url = 'http://mvn.ryred.co/repository/snapshots/'
+    }
+}
+
+dependencies {
+    // WARNING - You will require this. I had it installed locally. It's not uploaded to Sonatype, unlike all other
+    // Bungee components.
+    compile group: 'net.md-5', name: 'bungeecord-proxy', version: '1.8-SNAPSHOT'
+    compile group: 'net.md-5', name: 'bungeecord-api', version: '1.8-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+/*
+group 'uk.co.drnaylor.minecraft'
+version '1.0'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    jcenter()
+    maven {
+        name = 'oss-snapshots'
+        url = 'https://oss.sonatype.org/content/repositories/snapshots'
+    }
+}
+
+dependencies {
+    // WARNING - You will require this. I had it installed locally. It's not uploaded to Sonatype, unlike all other
+    // Bungee components.
+    compile group: 'net.md-5', name: 'bungeecord-proxy', version: '1.8-SNAPSHOT'
+    compile group: 'net.md-5', name: 'bungeecord-api', version: '1.8-SNAPSHOT'
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
+
+ */

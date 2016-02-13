@@ -1,0 +1,4 @@
+name: SpongeIPFowarding
+main: uk.co.drnaylor.minecraft.bungeeforward.ForgeIPForwardingPlugin
+version: 1.0
+author: dualspiral
